@@ -1,0 +1,187 @@
+/* ===============================
+ * GOOGLE FONTS IMPORT
+ * =============================== */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* ===============================
+ * Template name: commingsoon One
+ * Author: Fahad Mayow
+ * Author profile: https://github.com/fahadmayow
+ * =============================== */
+
+/* --------------------
+ * variables
+ * -------------------*/
+:root {
+  --primary-color: #3a26ba;
+  --secondary-color: #7a5dcc;
+  --white-color: #ffffff;
+  --primary-shadow: 0 4px 46px 16px rgb(0 0 0 / 0.17);
+
+  --gradient-color: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+
+  --font-name: "Roboto", sans-serif;
+  --title-size: 36px;
+  --text-size: 16px;
+}
+
+/* --------------------
+ * page styles
+ * -------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white-color);
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--font-name);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  overflow: hidden;
+}
+.container {
+  width: 970px;
+  background: var(--gradient-color);
+  padding: 40px;
+  margin: 0px auto;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: var(--primary-shadow);
+}
+
+.logo {
+  position: absolute;
+  background-color: var(--white-color);
+  width: 130px;
+  height: 130px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 16px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--primary-shadow);
+}
+.logo img {
+  width: 100%;
+}
+
+.slogan {
+  text-align: center;
+  padding-top: 70px;
+  color: var(--white-color);
+}
+.slogan--title {
+  text-transform: uppercase;
+  font-size: var(--title-size);
+  margin: 0px;
+}
+.slogan--desc {
+  font-size: var(--text-size);
+  opacity: 0.6;
+  margin: 0px;
+  margin-top: 12px;
+}
+
+.social {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+}
+.social ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+.social ul li {
+  list-style: none;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.social ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-color);
+  color: var(--white-color);
+  line-height: 40px;
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+.social ul li a:hover {
+  opacity: 0.7;
+}
+
+.progressor-wrap {
+  width: 400px;
+  padding: 5px;
+  background-color: var(--white-color);
+  margin: 0px auto;
+  margin-top: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: var(--primary-shadow);
+}
+.progressor-item {
+  height: 30px;
+  width: 150px;
+  background: var(--gradient-color);
+  border-radius: 50px;
+  margin-left: -160px;
+  animation: 1.5s progressor infinite;
+}
+
+/* --------------------
+ * progressor animation
+ * -------------------*/
+@keyframes progressor {
+  from {
+    margin-left: -160px;
+  }
+  to {
+    margin-left: 110%;
+  }
+}
+
+/* --------------------
+ * responsive styles
+ * -------------------*/
+@media screen and (max-width: 990px) {
+  body {
+    padding: 40px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .progressor-wrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 530px) {
+  body {
+    height: auto;
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+  .container {
+    display: block;
+    overflow: ;
+  }
+}
